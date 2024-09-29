@@ -1,20 +1,20 @@
 // Dependencies
-import { FC } from "react";
+import { FC, lazy } from "react";
+
+// components
+const Logo = lazy(() => import("./components/logo"));
+const MainMenu = lazy(() => import("@/components/menu"));
 
 
 const MainNavbar: FC = () => {
   return (
-<div className="container">
-	
-	<svg className="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
-		 <circle cx="170" cy="170" r="160" stroke="#E2007C"/>
-		 <circle cx="170" cy="170" r="135" stroke="#404041"/>
-		 <circle cx="170" cy="170" r="110" stroke="#E2007C"/>
-		 <circle cx="170" cy="170" r="85" stroke="#404041"/>
-	</svg>
-	
-</div>
-  )
-}
+    <div className=" ">
+      <div className="z-50">
+        <MainMenu />
+      </div>
+      <Logo />
+    </div>
+  );
+};
 
 export default MainNavbar;

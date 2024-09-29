@@ -13,18 +13,19 @@ import "@/assets/librarys/fontawesome/css/all.min.css";
 import "~bootstrap/bootstrap.scss";
 import "@/assets/styles/style.scss";
 
-// Layout
-const Layout = lazy(()=> import( "@/layout"));
 
-const App:FC = ()=>{
+// Layout
+const Layout = lazy(() => import("@/layout"));
+
+const App: FC = () => {
   return (
-    <Provider store={store}>
-      <Router>
-        <Suspense fallback="loading" >
-          <Layout />
-        </Suspense>
-      </Router>
-    </Provider>
+      <Provider store={store}>
+        <Router>
+          <Suspense fallback="loading" >
+            <Layout />
+          </Suspense>
+        </Router>
+      </Provider>
   )
 }
 

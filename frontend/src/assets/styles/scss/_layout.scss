@@ -1,15 +1,19 @@
 .main-layout {
   @apply bg-white min-h-[100vh] w-full flex;
 
-
+// Languages 
   &.direction-ltr {
     font-family: 'Poppins', sans-serif;
     direction: ltr;
   }
 
-
+  &.direction-rtl {
+    font-family: 'Poppins', sans-serif;
+    direction: rtl;
+  }
+  
   .main-content {
-    @apply w-auto m-0 p-0;
+    @apply w-full m-0 p-0;
 
     >[class*="col-"] {
       @apply p-0 m-0;
